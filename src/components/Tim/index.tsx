@@ -1,7 +1,9 @@
 import React from 'react';
 import { Stack, Row } from '@/components/commons/commons';
-const Top = require('./top.png');
-const Bottom = require('./bottom.png');
+const TopWebp = require('./top.webp');
+const TopPng = require('./top.png');
+const BottomWebp = require('./bottom.webp');
+const BottomPng = require('./bottom.png');
 
 interface TimProps {
   talking: boolean;
@@ -11,18 +13,26 @@ const Tim: React.FC<TimProps> = props => {
   return (
     <Row>
       <Stack>
-        <img
-          className={(props.talking && 'head-top') || ''}
-          src={Top.default}
-          alt='Tim'
-          width='250px'
-        />
-        <img
-          className={(props.talking && 'head-bottom') || ''}
-          src={Bottom.default}
-          alt='Tim'
-          width='250px'
-        />
+        <picture>
+          <source srcSet={TopWebp.default} type='image/webp' />
+          <source srcSet={TopPng.default} type='image/png' />
+          <img
+            className={(props.talking && 'head-top') || ''}
+            src={TopPng.default}
+            alt='Tim'
+            width='250px'
+          />
+        </picture>
+        <picture>
+          <source srcSet={BottomWebp.default} type='image/webp' />
+          <source srcSet={BottomPng.default} type='image/png' />
+          <img
+            className={(props.talking && 'head-bottom') || ''}
+            src={BottomPng.default}
+            alt='Tim'
+            width='250px'
+          />
+        </picture>
       </Stack>
     </Row>
   );

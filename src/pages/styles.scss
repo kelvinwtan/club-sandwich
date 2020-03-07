@@ -9,6 +9,11 @@ body {
   background: #212121;
 }
 
+picture {
+  display: flex;
+  flex-direction: column;
+}
+
 .head-top,
 .head-bottom {
   animation-duration: 0.5s;

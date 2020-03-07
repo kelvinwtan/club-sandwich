@@ -9,7 +9,7 @@ const Stack = styled.div`
 
 const Container = styled.div`
   max-width: 70rem;
-  padding: 2rem 5rem;
+  padding: 2remlocalh 5rem;
   margin: 0 auto;
 `;
 

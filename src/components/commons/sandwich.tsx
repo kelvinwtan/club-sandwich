@@ -8,6 +8,7 @@ const Title = styled.h1`
   color: ${white};
   margin-bottom: 2rem;
   margin-top: 2rem;
+  text-align: center;
 `;
 
 const SandwichGeneratorApp = styled.main`
