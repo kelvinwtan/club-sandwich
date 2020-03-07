@@ -105,8 +105,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/kelvintan/KelvinTan/club-sandwich/src/pages/index.tsx";
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.scss */ "./src/pages/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/kelvin/Projects/club-sandwich/src/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 function Home() {
   return __jsx("div", {
@@ -126,6 +129,17 @@ function Home() {
 
 /***/ }),
 
+/***/ "./src/pages/styles.scss":
+/*!*******************************!*\
+  !*** ./src/pages/styles.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ 4:
 /*!***********************************!*\
   !*** multi ./src/pages/index.tsx ***!
@@ -133,7 +147,7 @@ function Home() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kelvintan/KelvinTan/club-sandwich/src/pages/index.tsx */"./src/pages/index.tsx");
+module.exports = __webpack_require__(/*! /Users/kelvin/Projects/club-sandwich/src/pages/index.tsx */"./src/pages/index.tsx");
 
 
 /***/ }),

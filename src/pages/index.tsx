@@ -1,9 +1,19 @@
-import React from "react";
+import React from 'react';
+import SandwichGenerator from '@/components/SandwichGenerator';
+import Head from 'next/head';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <div>
-      <p>Hello Sandwich</p>
-    </div>
+    <>
+      <Head>
+        <link
+          href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
+          rel='stylesheet'
+        />
+      </Head>
+      <SandwichGenerator />
+    </>
   );
-}
+};
+
+export default Home;

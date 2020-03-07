@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background: #212121;
+}
+
+.head-top,
+.head-bottom {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: bobble-head-top;
+}
+// adjust slightly for .head-bottom
+.head-bottom {
+  // otherwise it's a little chin-y
+  animation-duration: 0.5s;
+  animation-name: bobble-head-bottom;
+}
+
+// these might work better if the durations were different, effectively making more random-ish movements.
+// I'd also add multiple keyframes to add more variation.
+// this is the lazy version, though.
+@keyframes bobble-head-top {
+  0 {
+    transform: translateY(-3rem) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2rem) translateX(2rem) rotate(10deg);
+  }
+  50% {
+    transform: translateY(0rem) translateX(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-2rem) translateX(-2rem) rotate(-10deg);
+  }
+}
+@keyframes bobble-head-bottom {
+  0 {
+    transform: translateY(0rem) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(0.2rem) translateX(0.3vmin) rotate(3deg);
+  }
+  50% {
+    transform: translateY(0rem) translateX(0) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(0.2rem) translateX(-0.1vmin) rotate(-3deg);
+  }
+}
+
+$breadColor: #f4e2b9;
+$breadTexture: #e6d5ae;
+$tomatoesColor: #ff6347;
+$tomatoesTexture: #e65940;
+$steakColor: #693d3d;
+$steakTexture: #542d2d;
+$laitueColor: #48a357;
+$laitueTexture: #9ed870;
+
+#sandwich {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  .bread-top {
+    display: flex;
+    position: relative;
+    margin-bottom: -5px;
+    z-index: 99;
+
+    div {
+      width: 100%;
+      height: 70px;
+      position: relative;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+      background-color: $breadColor;
+
+      &:after,
+      &:before {
+        content: '';
+        width: 5px;
+        height: 80%;
+        position: absolute;
+        top: -10px;
+        transform: rotate(-45deg);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: $breadTexture;
+      }
+
+      &:after {
+        left: 35%;
+      }
+      &:before {
+        right: 35%;
+      }
+
+      &:nth-child(2) {
+        margin-left: -50px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+
+  .sauce {
+    width: 100%;
+    height: 8px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #212121;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      z-index: 99;
+      border-radius: 5px;
+      background-color: #212121;
+    }
+
+    &::after {
+      width: 20px;
+      height: 10px;
+      left: 30%;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0);
+    }
+
+    &::before {
+      width: 40px;
+      height: 20px;
+      right: 30%;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0);
+    }
+  }
+
+  .tomatoes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    div {
+      width: calc(100% / 3);
+      height: 25px;
+      position: relative;
+      margin-left: -2px;
+      border: 3px solid $tomatoesTexture;
+      border-radius: 50px;
+      box-sizing: border-box;
+      background-color: $tomatoesColor;
+    }
+  }
+
+  .laitue {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin: -5px auto 0 auto;
+    border-top: 8px solid $laitueColor;
+    border-left: 4px solid $laitueColor;
+    border-right: 4px solid $laitueColor;
+    box-sizing: border-box;
+    background-color: $laitueTexture;
+  }
+
+  .cheddar {
+    width: 100%;
+    height: 10px;
+    position: relative;
+    border-radius: 10px;
+    margin-top: -5px;
+    background-color: #ffa500;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      z-index: 99;
+      border-radius: 5px;
+      background-color: #ffa500;
+    }
+
+    &::after {
+      width: 40px;
+      height: 20px;
+      right: 30px;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0);
+    }
+
+    &::before {
+      width: 80px;
+      height: 30px;
+      left: 30px;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0);
+    }
+  }
+
+  .steak {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: $steakColor;
+    overflow: hidden;
+
+    div {
+      width: 3px;
+      height: 50%;
+      position: relative;
+      transform: rotate(-45deg);
+      margin-top: -3px;
+      border-radius: 5px;
+      background-color: $steakTexture;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: rotate(90deg);
+        background-color: $steakTexture;
+      }
+    }
+  }
+
+  .bread-bottom {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -5px;
+    background-color: $breadColor;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 15px);
+      height: 10px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color: $breadTexture;
+    }
+  }
+
+  &:hover .bite {
+    div.morsure:nth-child(1) {
+      animation-name: eatIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    div.morsure:nth-child(2) {
+      animation-name: eatIn;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-fill-mode: both;
+    }
+
+    div.morsure:nth-child(3) {
+      animation-name: eatIn;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: both;
+    }
+  }
+
+  .bite {
+    div.morsure:nth-child(1) {
+      right: -10px;
+      top: 0;
+    }
+
+    div.morsure:nth-child(2) {
+      right: -5px;
+      top: 60px;
+    }
+
+    div.morsure:nth-child(3) {
+      right: 20px;
+      top: -10px;
+    }
+
+    .morsure {
+      visibility: hidden;
+      position: absolute;
+      transform: rotate(-5deg);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        border-radius: 50%;
+        background-color: #212121;
+
+        &:nth-child(1) {
+          width: 40px;
+          height: 40px;
+          margin-bottom: -20px;
+        }
+        &:nth-child(2) {
+          width: 80px;
+          height: 80px;
+          margin-left: -20px;
+        }
+        &:nth-child(3) {
+          width: 60px;
+          height: 60px;
+          margin-top: -40px;
+        }
+        &:nth-child(4) {
+          width: 20px;
+          height: 20px;
+          margin-top: -10px;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes eatIn {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes eatOut {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
