@@ -1,15 +1,12 @@
 import React from 'react';
-import SandwichGenerator from '@/components/SandwichGenerator';
 import Head from 'next/head';
+import SandwichGenerator from '@/components/SandwichGenerator';
 
 const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <link
-          href='https://fonts.googleapis.com/css?family=Montserrat&display=swap'
-          rel='stylesheet'
-        />
+        <title>Sandwich Club</title>
       </Head>
       <SandwichGenerator />
     </>
