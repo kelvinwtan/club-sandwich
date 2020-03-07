@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack, Row } from '@/components/commons/commons';
-import Top from './top.png';
-import Bottom from './bottom.png';
+const Top = require('./top.png');
+const Bottom = require('./bottom.png');
 
 interface TimProps {
   talking: boolean;
@@ -13,13 +13,13 @@ const Tim: React.FC<TimProps> = props => {
       <Stack>
         <img
           className={(props.talking && 'head-top') || ''}
-          src={Top}
+          src={Top.default}
           alt='Tim'
           width='400px'
         />
         <img
           className={(props.talking && 'head-bottom') || ''}
-          src={Bottom}
+          src={Bottom.default}
           alt='Tim'
           width='400px'
         />

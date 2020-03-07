@@ -5750,14 +5750,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_commons_commons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/commons/commons */ "./src/components/commons/commons.tsx");
-/* harmony import */ var _top_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top.png */ "./src/components/Tim/top.png");
-/* harmony import */ var _bottom_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bottom.png */ "./src/components/Tim/bottom.png");
 var _jsxFileName = "/Users/kelvin/Projects/club-sandwich/src/components/Tim/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const Top = __webpack_require__(/*! ./top.png */ "./src/components/Tim/top.png");
 
+const Bottom = __webpack_require__(/*! ./bottom.png */ "./src/components/Tim/bottom.png");
 
 const Tim = props => {
   return __jsx(_components_commons_commons__WEBPACK_IMPORTED_MODULE_1__["Row"], {
@@ -5774,7 +5774,7 @@ const Tim = props => {
     __self: undefined
   }, __jsx("img", {
     className: props.talking && 'head-top' || '',
-    src: _top_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+    src: Top.default,
     alt: "Tim",
     width: "400px",
     __source: {
@@ -5784,7 +5784,7 @@ const Tim = props => {
     __self: undefined
   }), __jsx("img", {
     className: props.talking && 'head-bottom' || '',
-    src: _bottom_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+    src: Bottom.default,
     alt: "Tim",
     width: "400px",
     __source: {

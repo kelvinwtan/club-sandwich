@@ -3,8 +3,8 @@ const path = require('path');
 const withImages = require('next-images');
 const withStyles = require('@zeit/next-sass');
 
-module.exports = withStyles(
-  withImages({
+module.exports = withImages(
+  withStyles({
     /* config options here */
     esModule: true,
     webpack(config, options) {
