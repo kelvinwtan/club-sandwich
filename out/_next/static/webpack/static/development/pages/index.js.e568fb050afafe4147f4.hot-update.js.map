@@ -1,1 +1,0 @@
-{"version":3,"file":"static/webpack/static/development/pages/index.js.e568fb050afafe4147f4.hot-update.js","sources":["webpack:///./src/components/commons/variables.ts"],"sourcesContent":["const black = '#212121';\nconst white = '#e5e5e5';\nconst blue = '#2196f3';\n\nexport { black, white, blue };\n"],"mappings":";;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA;AACA;;;;;A","sourceRoot":""}
