@@ -1,6 +1,255 @@
-div {
-  background: black;
-  color: white; }
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background: #212121; }
+
+.head-top,
+.head-bottom {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: bobble-head-top; }
+
+.head-bottom {
+  animation-duration: 0.5s;
+  animation-name: bobble-head-bottom; }
+
+@keyframes bobble-head-top {
+  0 {
+    transform: translateY(-3rem) translateX(0) rotate(0deg); }
+  25% {
+    transform: translateY(-2rem) translateX(2rem) rotate(10deg); }
+  50% {
+    transform: translateY(0rem) translateX(0) rotate(0deg); }
+  75% {
+    transform: translateY(-2rem) translateX(-2rem) rotate(-10deg); } }
+
+@keyframes bobble-head-bottom {
+  0 {
+    transform: translateY(0rem) translateX(0) rotate(0deg); }
+  25% {
+    transform: translateY(0.2rem) translateX(0.3vmin) rotate(3deg); }
+  50% {
+    transform: translateY(0rem) translateX(0) rotate(0deg); }
+  75% {
+    transform: translateY(0.2rem) translateX(-0.1vmin) rotate(-3deg); } }
+
+#sandwich {
+  width: 300px;
+  display: flex;
+  flex-direction: column; }
+  #sandwich .bread-top {
+    display: flex;
+    position: relative;
+    margin-bottom: -5px;
+    z-index: 99; }
+    #sandwich .bread-top div {
+      width: 100%;
+      height: 70px;
+      position: relative;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+      background-color: #f4e2b9; }
+      #sandwich .bread-top div:after, #sandwich .bread-top div:before {
+        content: '';
+        width: 5px;
+        height: 80%;
+        position: absolute;
+        top: -10px;
+        transform: rotate(-45deg);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #e6d5ae; }
+      #sandwich .bread-top div:after {
+        left: 35%; }
+      #sandwich .bread-top div:before {
+        right: 35%; }
+      #sandwich .bread-top div:nth-child(2) {
+        margin-left: -50px;
+        border-bottom-right-radius: 20px; }
+  #sandwich .sauce {
+    width: 100%;
+    height: 8px;
+    position: relative;
+    border-radius: 5px;
+    background-color: #212121; }
+    #sandwich .sauce::after, #sandwich .sauce::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      z-index: 99;
+      border-radius: 5px;
+      background-color: #212121; }
+    #sandwich .sauce::after {
+      width: 20px;
+      height: 10px;
+      left: 30%;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0); }
+    #sandwich .sauce::before {
+      width: 40px;
+      height: 20px;
+      right: 30%;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0); }
+  #sandwich .tomatoes {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #sandwich .tomatoes div {
+      width: calc(100% / 3);
+      height: 25px;
+      position: relative;
+      margin-left: -2px;
+      border: 3px solid #e65940;
+      border-radius: 50px;
+      box-sizing: border-box;
+      background-color: #ff6347; }
+  #sandwich .laitue {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin: -5px auto 0 auto;
+    border-top: 8px solid #48a357;
+    border-left: 4px solid #48a357;
+    border-right: 4px solid #48a357;
+    box-sizing: border-box;
+    background-color: #9ed870; }
+  #sandwich .cheddar {
+    width: 100%;
+    height: 10px;
+    position: relative;
+    border-radius: 10px;
+    margin-top: -5px;
+    background-color: #ffa500; }
+    #sandwich .cheddar::after, #sandwich .cheddar::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      z-index: 99;
+      border-radius: 5px;
+      background-color: #ffa500; }
+    #sandwich .cheddar::after {
+      width: 40px;
+      height: 20px;
+      right: 30px;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0); }
+    #sandwich .cheddar::before {
+      width: 80px;
+      height: 30px;
+      left: 30px;
+      clip-path: polygon(50% 0%, 100% 0, 76% 45%, 57% 23%, 30% 100%, 0 1%, 0 0); }
+  #sandwich .steak {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #693d3d;
+    overflow: hidden; }
+    #sandwich .steak div {
+      width: 3px;
+      height: 50%;
+      position: relative;
+      transform: rotate(-45deg);
+      margin-top: -3px;
+      border-radius: 5px;
+      background-color: #542d2d; }
+      #sandwich .steak div:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: rotate(90deg);
+        background-color: #542d2d; }
+  #sandwich .bread-bottom {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -5px;
+    background-color: #f4e2b9; }
+    #sandwich .bread-bottom:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 15px);
+      height: 10px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color: #e6d5ae; }
+  #sandwich:hover .bite div.morsure:nth-child(1) {
+    animation-name: eatIn;
+    animation-duration: 1s;
+    animation-fill-mode: both; }
+  #sandwich:hover .bite div.morsure:nth-child(2) {
+    animation-name: eatIn;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both; }
+  #sandwich:hover .bite div.morsure:nth-child(3) {
+    animation-name: eatIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both; }
+  #sandwich .bite div.morsure:nth-child(1) {
+    right: -10px;
+    top: 0; }
+  #sandwich .bite div.morsure:nth-child(2) {
+    right: -5px;
+    top: 60px; }
+  #sandwich .bite div.morsure:nth-child(3) {
+    right: 20px;
+    top: -10px; }
+  #sandwich .bite .morsure {
+    visibility: hidden;
+    position: absolute;
+    transform: rotate(-5deg);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #sandwich .bite .morsure div {
+      border-radius: 50%;
+      background-color: #212121; }
+      #sandwich .bite .morsure div:nth-child(1) {
+        width: 40px;
+        height: 40px;
+        margin-bottom: -20px; }
+      #sandwich .bite .morsure div:nth-child(2) {
+        width: 80px;
+        height: 80px;
+        margin-left: -20px; }
+      #sandwich .bite .morsure div:nth-child(3) {
+        width: 60px;
+        height: 60px;
+        margin-top: -40px; }
+      #sandwich .bite .morsure div:nth-child(4) {
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: 30px; }
+
+@keyframes eatIn {
+  from {
+    visibility: hidden; }
+  to {
+    visibility: visible; } }
+
+@keyframes eatOut {
+  from {
+    visibility: visible; }
+  to {
+    visibility: hidden; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
