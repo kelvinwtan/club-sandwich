@@ -15,13 +15,13 @@ const Tim: React.FC<TimProps> = props => {
           className={(props.talking && 'head-top') || ''}
           src={Top.default}
           alt='Tim'
-          width='400px'
+          width='250px'
         />
         <img
           className={(props.talking && 'head-bottom') || ''}
           src={Bottom.default}
           alt='Tim'
-          width='400px'
+          width='250px'
         />
       </Stack>
     </Row>

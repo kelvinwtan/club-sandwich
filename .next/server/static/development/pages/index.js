@@ -250,7 +250,7 @@ const Tim = props => {
     className: props.talking && 'head-top' || '',
     src: Top.default,
     alt: "Tim",
-    width: "400px",
+    width: "250px",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -260,7 +260,7 @@ const Tim = props => {
     className: props.talking && 'head-bottom' || '',
     src: Bottom.default,
     alt: "Tim",
-    width: "400px",
+    width: "250px",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
@@ -311,7 +311,7 @@ const Stack = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withC
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "commons__Container",
   componentId: "lkp0bb-1"
-})(["max-width:70rem;padding:0 5rem;margin:0 auto;"]);
+})(["max-width:70rem;padding:2rem 5rem;margin:0 auto;"]);
 const Button = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button.withConfig({
   displayName: "commons__Button",
   componentId: "lkp0bb-2"
@@ -352,7 +352,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.h1.withConfig({
   displayName: "sandwich__Title",
   componentId: "sc-1vmeft3-0"
-})(["font-size:2rem;color:", ";margin-bottom:2rem;margin-top:4rem;"], _variables__WEBPACK_IMPORTED_MODULE_3__["white"]);
+})(["font-size:2rem;color:", ";margin-bottom:2rem;margin-top:2rem;"], _variables__WEBPACK_IMPORTED_MODULE_3__["white"]);
 const SandwichGeneratorApp = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.main.withConfig({
   displayName: "sandwich__SandwichGeneratorApp",
   componentId: "sc-1vmeft3-1"
