@@ -16,9 +16,6 @@ const SandwichGeneratorApp = styled.main`
   padding: 0;
 `
 
-interface GoogleMapsProps {
-  name: string
-}
 const GoogleMaps: React.FC<ResultProps> = (props) => {
   return (
     <iframe
