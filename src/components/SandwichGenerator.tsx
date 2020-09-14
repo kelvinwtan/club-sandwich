@@ -18,6 +18,7 @@ const SandwichGenerator: React.FC = () => {
     const speeches = [
       `yum yum i love the sandwiches at ${name}`,
       'who needs pilot when i have sandwich club',
+      `it's time to earn the right to have a sandwich`,
     ]
     return speeches[Math.floor(Math.random() * speeches.length)]
   }
